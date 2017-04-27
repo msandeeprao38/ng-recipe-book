@@ -1,0 +1,19 @@
+    <a 
+    [routerLink]="[id]"
+    routerLinkActive="active"
+    style="cursor:pointer" 
+    class="list-group-item clearfix"
+    >
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{item.name}}</h4>
+        <p class="list-group-item-text">{{item.description}}</p>
+      </div>
+      <span class="pull-right">
+        <!--For src we can either use string interpolation src="{{recipe.imagePath}}" or propety binding [src]="recipe.imagePath"-->
+        <img 
+        src="{{item.imagePath}}" 
+        alt="{{item.name}}" 
+        class="img-responsive" 
+        style="max-height: 50px;">
+      </span>
+    </a>
